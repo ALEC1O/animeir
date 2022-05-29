@@ -32,3 +32,34 @@
 
 	background-color: transparent;
 }
+
+#m_logo {
+}
+
+#m_logo > a {
+	font-family: "Ubuntu", sans-serif;
+	font-weight: bold;
+	font-size: 26px;
+	text-align: center;
+	text-decoration: none;
+	color: rgb(225, 225, 250);
+	padding: 10px;
+}
+
+#m_menu {
+	cursor: pointer;
+
+	width: 40px;
+	height: 40px;
+
+	background-color: transparent;
+	border: none;
+	list-style: none;
+	outline-style: none;
+}
+
+#m_menu > i {
+	color: rgb(225, 225, 250);
+	font-size: 32px;
+	padding: 10px;
+}
