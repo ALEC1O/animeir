@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="{% block lang %}en{% endblock %}">
+	{% include 'layout/head.html' %}
+	<body>
+		<div>
+			{% include 'layout/header.html' %}
+			<main id="main-content">
+				{% block content %}
+				<h1>Welcome</h1>
+				{% endblock %}
+			</main>
+		</div>
+		{% include 'layout/footer.html' %}
+	</body>
+</html>
