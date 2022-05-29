@@ -8,8 +8,7 @@ class HomeController:
         route = Blueprint('home', __name__, static_folder='../www', template_folder='../views')
 
         @route.route('/')
-        def a():
-
-            return render('index.html')
+        def home():
+            return render('page/home.html')
 
         app.register_blueprint(route)
