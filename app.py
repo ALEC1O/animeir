@@ -1,12 +1,11 @@
 from flask import Flask
 from decouple import config
+from src.controller.HomeController import HomeController
 
 app = Flask(__name__)
 
-
-@app.route('/')
-def index():
-    return "Index"
+# init home manager
+HomeController(app)
 
 
 if __name__ == "__main__":
