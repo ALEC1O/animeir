@@ -47,10 +47,19 @@
 }
 
 #m_menu {
+	display: flex;
+
+	padding: 10px;
+
 	cursor: pointer;
 
-	width: 40px;
-	height: 40px;
+	width: 50px;
+	height: 50px;
+
+	align-items: center;
+	align-content: center;
+	justify-items: center;
+	justify-content: center;
 
 	background-color: transparent;
 	border: none;
@@ -61,5 +70,5 @@
 #m_menu > i {
 	color: rgb(225, 225, 250);
 	font-size: 32px;
-	padding: 10px;
+	padding: 5px;
 }
