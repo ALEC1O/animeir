@@ -18,15 +18,17 @@
 		<h2>episódios recentes</h2>
 		<article class="post-row">
 			{% for i in range(0, 50) %}
-			<li class="poster_episode">{{ i + 1 }}</li>
+			<li class="poster_episode">
+				<img src="www/img/poster/poster.jpg" alt="poster" />
+			</li>
 			{% endfor %}
 		</article>
 
 		<h2>animes recentes</h2>
 		<article class="post-row">
-			{% for i in range(0, 50) %}
-			<li class="poster_episode">{{ i + 1 }}</li>
-			{% endfor %}
+			<li class="poster_anime">
+				<img src="www/img/poster/poster.jpg" alt="poster" />
+			</li>
 		</article>
 
 		<span>
@@ -38,14 +40,18 @@
 		<h2>animes populares</h2>
 		<article class="post-row">
 			{% for i in range(0, 50) %}
-			<li class="poster_anime">{{ i + 1 }}</li>
+			<li class="poster_anime">
+				<img src="www/img/poster/poster.jpg" alt="poster" />
+			</li>
 			{% endfor %}
 		</article>
 
 		<h2>episódios populares</h2>
 		<article class="post-row">
 			{% for i in range(0, 50) %}
-			<li class="poster_anime">{{ i + 1 }}</li>
+			<li class="poster_episode">
+				<img src="www/img/poster/poster.jpg" alt="poster" />
+			</li>
 			{% endfor %}
 		</article>
 	</section>
