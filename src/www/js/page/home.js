@@ -9,7 +9,7 @@ function ResizeAnimePoster() {
 		const all = document.querySelectorAll(".poster_anime");
 
 		all.forEach((e) => {
-			e.style.height = `${e.clientWidth * 1.45}px`;
+			e.style.height = `${e.clientWidth * 1.5}px`;
 		});
 	} catch {}
 
