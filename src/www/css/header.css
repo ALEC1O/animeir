@@ -36,6 +36,14 @@
 #m_logo {
 }
 
+#logo_ir {
+	color: #ff00ff;
+	text-transform: uppercase;
+	font-family: monospace;
+	font-size: inherit;
+	padding: 5px;
+}
+
 #m_logo > a {
 	font-family: "Ubuntu", sans-serif;
 	font-weight: bold;
