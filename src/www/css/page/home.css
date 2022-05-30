@@ -1,0 +1,37 @@
+.main_row {
+	padding: 16px;
+}
+
+.post-row {
+	list-style: none;
+	background-color: red;
+
+	display: flex;
+	align-content: flex-start;
+	align-items: flex-start;
+	justify-items: left;
+	justify-content: left;
+
+	overflow: auto;
+
+	margin-bottom: 50px;
+}
+
+.main_row h2 {
+	color: #2a8eff;
+	margin-bottom: 20px;
+	font-size: 22px;
+	font-weight: bold;
+	text-transform: capitalize;
+}
+
+.post-row > li {
+	position: relative;
+	display: block;
+	margin: 10px;
+	background-color: teal;
+	height: auto;
+	width: 100%;
+	min-height: 100px;
+	min-width: calc(100% / 3);
+}

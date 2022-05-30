@@ -1,7 +1,53 @@
-{% extends 'layout/base.html' %} {% block content %}
-<div>
-	{% for i in range(0, 10) %}
-	<h1>{{ i + 1 }}</h1>
-	{% endfor %}
-</div>
+{% extends 'layout/base.html' %} {% block lang %}pt-br{% endblock %} {% block title %}website1{% endblock %} {% block head %}
+<link rel="stylesheet" href="www/css/page/home.css" />
 {% endblock %}
+
+<div>
+	{% block content %}
+
+	<h1>Inicio</h1>
+
+	<section class="main_row">
+		<span>
+			<p>Recentes</p>
+			<hr />
+			<br /><br />
+		</span>
+
+		<h2>episódios recentes</h2>
+		<article class="post-row">
+			{% for i in range(0, 50) %}
+			<li>{{ i + 1 }}</li>
+			{% endfor %}
+		</article>
+
+		<h2>animes recentes</h2>
+		<article class="post-row">
+			{% for i in range(0, 50) %}
+			<li>{{ i + 1 }}</li>
+			{% endfor %}
+		</article>
+
+		<span>
+			<p>Populares</p>
+			<hr />
+			<br /><br />
+		</span>
+
+		<h2>animes populares</h2>
+		<article class="post-row">
+			{% for i in range(0, 50) %}
+			<li>{{ i + 1 }}</li>
+			{% endfor %}
+		</article>
+
+		<h2>episódios populares</h2>
+		<article class="post-row">
+			{% for i in range(0, 50) %}
+			<li>{{ i + 1 }}</li>
+			{% endfor %}
+		</article>
+	</section>
+
+	{% endblock %}
+</div>

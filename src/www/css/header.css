@@ -2,6 +2,8 @@
 	position: fixed;
 	display: flex;
 
+	left: 0;
+	right: 0;
 	top: 0;
 	z-index: 100;
 
@@ -37,7 +39,7 @@
 }
 
 .redtext {
-	color: rgb(100, 250, 200) !important;
+	color: #64fac8 !important;
 	font-family: cursive !important;
 	font-size: inherit;
 	padding: 5px !important;

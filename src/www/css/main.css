@@ -21,6 +21,7 @@ body {
 	background-color: rgb(225, 225, 250);
 }
 body > div {
+	padding: 20px;
 	background-color: transparent;
 }
 
