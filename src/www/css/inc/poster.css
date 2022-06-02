@@ -140,7 +140,7 @@
 
 .poster_title {
 	display: flex;
-	flex-wrap: wrap;
+	flex-wrap: nowrap;
 	flex-direction: row;
 
 	align-items: center;
