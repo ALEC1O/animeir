@@ -7,7 +7,10 @@
 
 	<h1>Inicio</h1>
 
-	<h2>Anime</h2>
+	<section class="poster_title">
+		<h2 class="color4">Animes recentes</h2>
+		<a href="#" class="color4">Mais<span class="color2">+</span></a>
+	</section>
 	<div class="poster_container">
 		<ul class="poster_buttons">
 			<li onclick="PosterButton('background', -1, this)" class="poster_button poster_button_left">
@@ -32,7 +35,10 @@
 		</section>
 	</div>
 
-	<h2>Episode</h2>
+	<section class="poster_title">
+		<h2 class="color4">Episódios recente</h2>
+		<a href="#" class="color4">Mais<span class="color2">+</span></a>
+	</section>
 	<div class="poster_container">
 		<ul class="poster_buttons">
 			<li onclick="PosterButton('background', -1, this)" class="poster_button poster_button_left">
@@ -57,6 +63,61 @@
 		</section>
 	</div>
 
+	<section class="poster_title">
+		<h2 class="color4">Animes populares</h2>
+		<a href="#" class="color4">Mais<span class="color2">+</span></a>
+	</section>
+	<div class="poster_container">
+		<ul class="poster_buttons">
+			<li onclick="PosterButton('background', -1, this)" class="poster_button poster_button_left">
+				<i class="bi bi-arrow-left"></i>
+			</li>
+			<li onclick="PosterButton('background', 1, this)" class="poster_button poster_button_right">
+				<i class="bi bi-arrow-right"></i>
+			</li>
+		</ul>
+		<section class="poster">
+			{% for i in range(0, 10) %}
+			<article class="poster_0 image_poster">
+				<div class="poster_1">
+					<img src="www/img/poster/image.jpg" alt="poster" />
+				</div>
+				<div class="poster_2">
+					<h2>Anime {{ i }}</h2>
+					<p>Episode {{ i }}</p>
+				</div>
+			</article>
+			{% endfor %}
+		</section>
+	</div>
+
+	<section class="poster_title">
+		<h2 class="color4">Episódios populares</h2>
+		<a href="#" class="color4">Mais<span class="color2">+</span></a>
+	</section>
+	<div class="poster_container">
+		<ul class="poster_buttons">
+			<li onclick="PosterButton('background', -1, this)" class="poster_button poster_button_left">
+				<i class="bi bi-arrow-left"></i>
+			</li>
+			<li onclick="PosterButton('background', 1, this)" class="poster_button poster_button_right">
+				<i class="bi bi-arrow-right"></i>
+			</li>
+		</ul>
+		<section class="poster">
+			{% for i in range(0, 10) %}
+			<article class="poster_0 image_background">
+				<div class="poster_1">
+					<img src="www/img/background/image.jpg" alt="poster" />
+				</div>
+				<div class="poster_2">
+					<h2>Anime {{ i }}</h2>
+					<p>Episode {{ i }}</p>
+				</div>
+			</article>
+			{% endfor %}
+		</section>
+	</div>
 	<script src="www/js/inc/image.js"></script>
 
 	{% endblock %}
