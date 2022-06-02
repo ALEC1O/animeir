@@ -10,8 +10,12 @@
 	<h2>Anime</h2>
 	<div class="poster_container">
 		<ul class="poster_buttons">
-			<li onclick="PosterButton('poster', -1, this)" class="poster_button poster_button_left"></li>
-			<li onclick="PosterButton('poster', 1, this)" class="poster_button poster_button_right"></li>
+			<li onclick="PosterButton('background', -1, this)" class="poster_button poster_button_left">
+				<i class="bi bi-arrow-left"></i>
+			</li>
+			<li onclick="PosterButton('background', 1, this)" class="poster_button poster_button_right">
+				<i class="bi bi-arrow-right"></i>
+			</li>
 		</ul>
 		<section class="poster">
 			{% for i in range(0, 10) %}
@@ -31,8 +35,12 @@
 	<h2>Episode</h2>
 	<div class="poster_container">
 		<ul class="poster_buttons">
-			<li onclick="PosterButton('background', -1, this)" class="poster_button poster_button_left"></li>
-			<li onclick="PosterButton('background', 1, this)" class="poster_button poster_button_right"></li>
+			<li onclick="PosterButton('background', -1, this)" class="poster_button poster_button_left">
+				<i class="bi bi-arrow-left"></i>
+			</li>
+			<li onclick="PosterButton('background', 1, this)" class="poster_button poster_button_right">
+				<i class="bi bi-arrow-right"></i>
+			</li>
 		</ul>
 		<section class="poster">
 			{% for i in range(0, 10) %}
