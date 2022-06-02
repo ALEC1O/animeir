@@ -89,6 +89,7 @@
 }
 
 /* button */
+/*
 .poster_button_left::after {
 	content: "<";
 }
@@ -96,8 +97,16 @@
 .poster_button_right::after {
 	content: ">";
 }
+*/
 
 .poster_button {
+	display: flex;
+
+	align-items: center;
+	align-content: center;
+	justify-items: center;
+	justify-content: center;
+
 	width: 30px;
 	height: 30px;
 
@@ -110,7 +119,23 @@
 	text-align: center;
 
 	z-index: 20;
-	background-color: tomato;
+}
+
+.poster_button i {
+	color: #2a8eff;
+	font-size: 22px;
+	font-weight: bold;
+	padding: 10px;
+	border-radius: 50%;
+}
+
+.poster_button i::before {
+	border-radius: 50%;
+	padding: 15px;
+	background-color: #e1e1fa;
+	border: solid 1px #2a8eff;
+	/*
+    */
 }
 
 /* responsive */
