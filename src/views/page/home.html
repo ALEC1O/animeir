@@ -1,5 +1,7 @@
 {% extends 'layout/base.html' %} {% block lang %}pt-br{% endblock %} {% block title %}website1{% endblock %} {% block head %}
 <link rel="stylesheet" href="www/css/page/home.css" />
+<link rel="stylesheet" href="www/css/inc/poster.css" />
+<link rel="stylesheet" href="www/css/inc/image.css" />
 <script src="www/js/page/home.js" defer></script>
 {% endblock %}
 
@@ -8,53 +10,37 @@
 
 	<h1>Inicio</h1>
 
-	<section class="main_row">
-		<span>
-			<p>Recentes</p>
-			<hr />
-			<br /><br />
-		</span>
-
-		<h2>episódios recentes</h2>
-		<article class="post-row">
-			{% for i in range(0, 50) %}
-			<li class="poster_episode">
-				<img src="www/img/poster/poster.jpg" alt="poster" />
-			</li>
-			{% endfor %}
+	<h2>Anime</h2>
+	<section class="poster">
+		{% for i in range(0, 10) %}
+		<article class="poster_0 image_poster">
+			<div class="poster_1">
+				<img src="www/img/poster/image.jpg" alt="poster" />
+			</div>
+			<div class="poster_2">
+				<h2>Anime {{ i }}</h2>
+				<p>Episode {{ i }}</p>
+			</div>
 		</article>
-
-		<h2>animes recentes</h2>
-		<article class="post-row">
-			<li class="poster_anime">
-				<img src="www/img/poster/poster.jpg" alt="poster" />
-			</li>
-		</article>
-
-		<span>
-			<p>Populares</p>
-			<hr />
-			<br /><br />
-		</span>
-
-		<h2>animes populares</h2>
-		<article class="post-row">
-			{% for i in range(0, 50) %}
-			<li class="poster_anime">
-				<img src="www/img/poster/poster.jpg" alt="poster" />
-			</li>
-			{% endfor %}
-		</article>
-
-		<h2>episódios populares</h2>
-		<article class="post-row">
-			{% for i in range(0, 50) %}
-			<li class="poster_episode">
-				<img src="www/img/poster/poster.jpg" alt="poster" />
-			</li>
-			{% endfor %}
-		</article>
+		{% endfor %}
 	</section>
+
+	<h2>Episode</h2>
+	<section class="poster">
+		{% for i in range(0, 10) %}
+		<article class="poster_0 image_background">
+			<div class="poster_1">
+				<img src="www/img/background/image.jpg" alt="poster" />
+			</div>
+			<div class="poster_2">
+				<h2>Anime {{ i }}</h2>
+				<p>Episode {{ i }}</p>
+			</div>
+		</article>
+		{% endfor %}
+	</section>
+
+	<script src="www/js/inc/image.js"></script>
 
 	{% endblock %}
 </div>
