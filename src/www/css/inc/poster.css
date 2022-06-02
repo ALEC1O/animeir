@@ -71,6 +71,48 @@
 	text-align: center;
 }
 
+/* buttons */
+.poster_buttons {
+	position: absolute;
+
+	display: flex;
+	flex-wrap: nowrap;
+	flex-direction: row;
+
+	align-items: center;
+	align-content: center;
+	justify-items: center;
+	justify-content: space-between;
+
+	z-index: 2;
+	background-color: rgba(0, 100, 100, 0.5);
+}
+
+/* button */
+.poster_button_left::after {
+	content: "<";
+}
+
+.poster_button_right::after {
+	content: ">";
+}
+
+.poster_button {
+	width: 30px;
+	height: 30px;
+
+	padding: 5px;
+	font-size: 32px;
+
+	cursor: pointer;
+	list-style: none;
+
+	text-align: center;
+
+	z-index: 20;
+	background-color: tomato;
+}
+
 /* responsive */
 
 @media screen and (min-width: 0px) and (max-width: 300px) {

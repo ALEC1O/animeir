@@ -1,8 +1,5 @@
 {% extends 'layout/base.html' %} {% block lang %}pt-br{% endblock %} {% block title %}website1{% endblock %} {% block head %}
-<link rel="stylesheet" href="www/css/page/home.css" />
 <link rel="stylesheet" href="www/css/inc/poster.css" />
-<link rel="stylesheet" href="www/css/inc/image.css" />
-<script src="www/js/page/home.js" defer></script>
 {% endblock %}
 
 <div>
@@ -11,34 +8,46 @@
 	<h1>Inicio</h1>
 
 	<h2>Anime</h2>
-	<section class="poster">
-		{% for i in range(0, 10) %}
-		<article class="poster_0 image_poster">
-			<div class="poster_1">
-				<img src="www/img/poster/image.jpg" alt="poster" />
-			</div>
-			<div class="poster_2">
-				<h2>Anime {{ i }}</h2>
-				<p>Episode {{ i }}</p>
-			</div>
-		</article>
-		{% endfor %}
-	</section>
+	<div class="poster_container">
+		<ul class="poster_buttons">
+			<li onclick="PosterButton('poster', -1, this)" class="poster_button poster_button_left"></li>
+			<li onclick="PosterButton('poster', 1, this)" class="poster_button poster_button_right"></li>
+		</ul>
+		<section class="poster">
+			{% for i in range(0, 10) %}
+			<article class="poster_0 image_poster">
+				<div class="poster_1">
+					<img src="www/img/poster/image.jpg" alt="poster" />
+				</div>
+				<div class="poster_2">
+					<h2>Anime {{ i }}</h2>
+					<p>Episode {{ i }}</p>
+				</div>
+			</article>
+			{% endfor %}
+		</section>
+	</div>
 
 	<h2>Episode</h2>
-	<section class="poster">
-		{% for i in range(0, 10) %}
-		<article class="poster_0 image_background">
-			<div class="poster_1">
-				<img src="www/img/background/image.jpg" alt="poster" />
-			</div>
-			<div class="poster_2">
-				<h2>Anime {{ i }}</h2>
-				<p>Episode {{ i }}</p>
-			</div>
-		</article>
-		{% endfor %}
-	</section>
+	<div class="poster_container">
+		<ul class="poster_buttons">
+			<li onclick="PosterButton('background', -1, this)" class="poster_button poster_button_left"></li>
+			<li onclick="PosterButton('background', 1, this)" class="poster_button poster_button_right"></li>
+		</ul>
+		<section class="poster">
+			{% for i in range(0, 10) %}
+			<article class="poster_0 image_background">
+				<div class="poster_1">
+					<img src="www/img/background/image.jpg" alt="poster" />
+				</div>
+				<div class="poster_2">
+					<h2>Anime {{ i }}</h2>
+					<p>Episode {{ i }}</p>
+				</div>
+			</article>
+			{% endfor %}
+		</section>
+	</div>
 
 	<script src="www/js/inc/image.js"></script>
 
