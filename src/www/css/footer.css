@@ -99,3 +99,30 @@
 .m_footer_content > ul > li > a:hover {
 	text-decoration: underline;
 }
+
+@media screen and (max-width: 768px) {
+	#m_footer_list {
+		padding: 20px;
+		justify-content: center;
+	}
+
+	.m_footer_content {
+		margin: 0 20px;
+		min-width: calc(100% / 3);
+		margin-bottom: 50px;
+	}
+}
+
+@media screen and (max-width: 512px) {
+	#m_footer_list {
+		flex-direction: column;
+		padding: 0;
+		justify-content: center;
+	}
+
+	.m_footer_content {
+		margin: 0 10px;
+		min-width: calc(100% / 3);
+		margin-bottom: 50px;
+	}
+}
