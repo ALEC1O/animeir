@@ -1,0 +1,103 @@
+{% extends 'layout/base.html' %} {% block lang %}pt-br{% endblock %} {% block title %}Animeir - Home{% endblock %} {%
+block head %}
+<link rel="stylesheet" href="www/css/inc/poster.css" />
+{% endblock %}
+
+{% block content %}
+
+<h1 class="_title">Register</h1>
+{% if message and message.error %}
+<h2 class="_error">{{ message.error}}</h2>
+{% endif %}
+<form action="" method="post" class="_form">
+    <input type="text" name="name" class="_text" placeholder="Name..." minlength="4" maxlength="32" required>
+    <input type="email" name="email" id="email" placeholder="Email..." class="_text" style="text-transform: lowercase;"
+        required>
+    <input type="password" name="password" id="password" placeholder="Password..." class="_text" minlength="6"
+        maxlength="128" required>
+    <input type="password" name="password" id="confirm_password" placeholder="Confirm password..." class="_text"
+        minlength="6" maxlength="128" required>
+    <input type="submit" value="Register" class="_button">
+    <h2 class="_link">You already have a <a href="/login">sign in now</a> account</h2>
+    <h2 class="_link">By registering you will be accepting our <a href="/license">term and policy</a></h2>
+    </h2>
+</form>
+
+
+<style>
+    ._title {
+        display: block;
+        text-align: center;
+        color: #5d3eff;
+    }
+
+    ._form {
+        display: flex;
+        flex-direction: column;
+        background-color: #5d3eff1a;
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        margin-bottom: 50px;
+    }
+
+    ._form label {
+        color: #5d3eff;
+        font-size: 32px;
+        text-transform: capitalize;
+        margin-top: 50px;
+    }
+
+    ._form input {
+        border: none;
+        outline: none;
+        background-color: transparent;
+        border-bottom: #5d3eff solid 2px;
+        margin: 20px;
+        padding: 10px;
+    }
+
+    ._form>._button {
+        color: #c8c8fa;
+        background-color: #5d3eff;
+        cursor: pointer;
+    }
+
+    ._form>._text {
+        color: #5d3eff;
+        font-size: 16px;
+        padding: 5px;
+    }
+
+    ._form>._text::placeholder {
+        color: #5d3eff;
+        font-size: 16px;
+        padding: 5px;
+        text-transform: capitalize !important;
+    }
+
+    ._form>._link {
+        color: #323264;
+        font-size: 16px;
+        padding: 5px;
+        text-align: center;
+    }
+
+    ._form>._link a {
+        color: #64fac8;
+        color: #5d3eff;
+        text-decoration: underline;
+    }
+
+    ._error {
+        display: block;
+        text-align: center;
+        text-decoration: wavy;
+        margin: 20px 0;
+        font-size: 18px;
+        color: #a00000;
+        text-transform: capitalize;
+    }
+</style>
+
+{% endblock %}
