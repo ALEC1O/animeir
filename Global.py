@@ -1,6 +1,6 @@
 from decouple import config
-from flask import Flask
-from flask_restx import Api, Model
+from flask import Flask, render_template as render
+from flask_restx import Api, Resource
 
 
 class Global:
@@ -16,4 +16,5 @@ class Global:
     @staticmethod
     def init_controllers():
         from controller import HomeController
+        from controller import LoginController
         from controller import AccountController

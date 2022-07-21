@@ -1,7 +1,7 @@
 from Global import *
 
-app = Flask(__name__)
-api = Api(app)
+app = Flask(__name__, static_folder='www/', template_folder='views/')
+api = None  # Api(app)
 
 Global.init(app, api)
 Global.init_controllers()
