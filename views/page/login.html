@@ -6,13 +6,20 @@ block head %}
 {% block content %}
 
 <h1 class="_title">Login</h1>
+{% if message and message.error %}
+<h2 class="_error">{{ message.error}}</h2>
+{% endif %}
 <form action="" method="post" class="_form">
     <input type="email" name="email" id="email" placeholder="Email..." class="_text" style="text-transform: lowercase;"
         required>
     <input type="password" name="password" id="password" placeholder="Password..." class="_text" minlength="6"
         maxlength="128" required>
     <input type="submit" value="Login" class="_button">
+    <h2 class="_link">You don't have a <a href="/register">sign up now</a> account</h2>
+    <h2 class="_link">Forgot your password <a href="/password">recover your password now</a></h2>
+    </h2>
 </form>
+
 
 <style>
     ._title {
@@ -64,6 +71,29 @@ block head %}
         font-size: 16px;
         padding: 5px;
         text-transform: capitalize !important;
+    }
+
+    ._form>._link {
+        color: #323264;
+        font-size: 16px;
+        padding: 5px;
+        text-align: center;
+    }
+
+    ._form>._link a {
+        color: #64fac8;
+        color: #5d3eff;
+        text-decoration: underline;
+    }
+
+    ._error {
+        display: block;
+        text-align: center;
+        text-decoration: wavy;
+        margin: 20px 0;
+        font-size: 18px;
+        color: #a00000;
+        text-transform: capitalize;
     }
 </style>
 
