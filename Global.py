@@ -17,4 +17,5 @@ class Global:
     def init_controllers():
         from controller import HomeController
         from controller import LoginController
+        from controller import RegisterController
         from controller import AccountController
