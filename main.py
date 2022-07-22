@@ -1,5 +1,3 @@
-from flask import Flask
-from decouple import config
 from Global import *
 
 app = Flask(__name__, static_folder='www/', template_folder='views/')
